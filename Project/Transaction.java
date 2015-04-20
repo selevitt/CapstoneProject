@@ -6,7 +6,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Transaction
+public class Transaction 
 {
     /** description of instance variable x (add comment for each instance variable) */
     private int total;
