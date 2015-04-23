@@ -25,4 +25,18 @@ public class ImageViewer
             frame.pack();
             frame.setVisible(true);
    }
+   private void makeMenuBar(JFrame frame)
+    {
+        JMenuBar menubar = new JMenuBar();
+        frame.setJMenuBar(menubar);
+
+        // create the File menu
+        JMenu fileMenu = new JMenu("File");
+        menubar.add(fileMenu);
+
+        JMenuItem openItem = new JMenuItem("Open");
+        fileMenu.add(openItem);
+        JMenuItem quitItem = new JMenuItem("Quit");
+        fileMenu.add(quitItem);
+    }
 }

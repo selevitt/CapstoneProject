@@ -4,4 +4,6 @@ comment0.target=ImageViewer()
 comment0.text=\r\n\ Create\ an\ ImageViewer\ show\ it\ on\ screen.\r\n
 comment1.params=
 comment1.target=void\ makeFrame()
-numComments=2
+comment2.params=frame
+comment2.target=void\ makeMenuBar(javax.swing.JFrame)
+numComments=3
