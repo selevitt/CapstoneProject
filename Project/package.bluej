@@ -111,6 +111,7 @@ target7.editor.x=377
 target7.editor.y=201
 target7.height=50
 target7.name=CashRegister
+target7.naviview.expanded=false
 target7.showInterface=false
 target7.type=ClassTarget
 target7.typeParameters=
