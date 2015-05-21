@@ -1,24 +1,18 @@
-import java.util.Scanner;
-import java.util.ArrayList;
- 
+
 
 /**
- * Write a description of class Directory here.
+ * Write a description of class CashRegisterModel here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Directory
+public class CashRegisterModel implements Register
 {
-    /** description of instance variable x (add comment for each instance variable) */
-    private ArrayList<Item> directory = new ArrayList<Item>();
 
-    /**
-     * Default constructor for objects of class Directory
-     */
-    public Directory()
+    public CashRegisterModel()
     {
-        
+        // initialise instance variables
+        x = 0;
     }
 
     /**
@@ -32,10 +26,10 @@ public class Directory
      * @param    y    description of parameter y
      * @return    description of the return value
      */
-    public String addItem(Item newItem)
+    public int sampleMethod(int y)
     {
-        directory.add(newItem);
-        return "The " + newItem.getItemName() + " was added to the directory.";
+        // put your code here
+        return x+y;
     }
 
 }
