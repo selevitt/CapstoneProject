@@ -1,16 +1,8 @@
 #BlueJ class context
-comment0.params=
-comment0.target=double\ getPrice()
+comment0.params=barcode\ newPrice
+comment0.target=void\ changePrice(int,\ double)
 comment1.params=
-comment1.target=java.lang.String\ getItemName()
-comment2.params=
-comment2.target=int\ getID()
-comment3.params=newPrice
-comment3.target=double\ changePrice(int)
-comment4.params=newItem
-comment4.target=java.lang.String\ addItem(Item)
-comment5.params=
-comment5.target=int\ getTotal()
-comment6.params=itemCost
-comment6.target=void\ addTransaction(int)
-numComments=7
+comment1.target=double\ getTotal()
+comment2.params=itemCost
+comment2.target=void\ addTransaction(double)
+numComments=3

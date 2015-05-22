@@ -39,5 +39,6 @@ public class Transaction
     {
         total += itemCost;
     }
+    
 
 }
