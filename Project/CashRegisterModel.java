@@ -6,13 +6,13 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class CashRegisterModel implements Register
+public class CashRegisterModel
 {
 
     public CashRegisterModel()
     {
         // initialise instance variables
-        x = 0;
+        
     }
 
     /**
@@ -26,10 +26,5 @@ public class CashRegisterModel implements Register
      * @param    y    description of parameter y
      * @return    description of the return value
      */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x+y;
-    }
-
+    
 }
