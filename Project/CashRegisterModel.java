@@ -6,13 +6,18 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class CashRegisterModel
+public class CashRegisterModel implements Register
 {
+    private Directory directory = new Directory();
+    private Transaction transaction = new Transaction();
+    private double total;
 
+    
     public CashRegisterModel()
     {
         // initialise instance variables
         
+        total = 0.0;
     }
 
     /**
@@ -26,5 +31,29 @@ public class CashRegisterModel
      * @param    y    description of parameter y
      * @return    description of the return value
      */
+    public String getItemName(int barcode)
+    {
+        return directory.getItem(barcode).getItemName();
+    }
+    
+    
+    
+     public void addTransaction(double itemCost)
+    {
+        total += itemCost;
+    }
+    
+    public double getTotal()
+    {
+        return transaction.getTotal();
+    }
+   
+    
+    public void changePrice(int barcode, double newPrice)
+    {
+        directory.getItem(barcode).changePrice(newPrice);
+        
+    }
+    
     
 }

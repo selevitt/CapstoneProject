@@ -7,13 +7,8 @@
  */
 public interface Register
 {
-    public double getPrice();
-    public String getItemName();
-    public int getID();
-    public double changePrice(int newPrice);
-    public String addItem(Item newItem);
-    public int getTotal();
-    public void addTransaction(int itemCost);
-    
+    public void changePrice(int barcode, double newPrice);
+    public double getTotal();
+    public void addTransaction(double itemCost);
 
 }

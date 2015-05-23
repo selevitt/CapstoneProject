@@ -37,5 +37,17 @@ public class Directory
         directory.add(newItem);
         return "The " + newItem.getItemName() + " was added to the directory.";
     }
+    
+    public Item getItem(int barcode)
+    {
+        for(int i = 0; i < directory.size(); i++)
+        {
+            if( directory.get(i).getID() == barcode)
+            {
+                return directory.get(i);
+            }
+        }
+        return null;
+    }
 
 }
