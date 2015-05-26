@@ -3,20 +3,17 @@
 /**
  * Write a description of class CashRegisterModel here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Seth) 
+ * @version (5/26/15)
  */
 public class CashRegisterModel implements Register
 {
     private Directory directory = new Directory();
-    private Transaction transaction = new Transaction();
     private double total;
-
     
     public CashRegisterModel()
     {
-        // initialise instance variables
-        
+        // initialise instance variable
         total = 0.0;
     }
 
@@ -38,14 +35,14 @@ public class CashRegisterModel implements Register
     
     
     
-     public void addTransaction(double itemCost)
+    public void addTransaction(int barcode)
     {
-        total += itemCost;
+        directory.getItem(barcode).getPrice();
     }
     
     public double getTotal()
     {
-        return transaction.getTotal();
+        return total;
     }
    
     
@@ -54,6 +51,14 @@ public class CashRegisterModel implements Register
         directory.getItem(barcode).changePrice(newPrice);
         
     }
+    
+    public void addItem(Item newItem)
+    {
+        directory.addItem(newItem);
+    }
+    
+
+
     
     
 }

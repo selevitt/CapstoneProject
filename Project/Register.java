@@ -9,6 +9,7 @@ public interface Register
 {
     public void changePrice(int barcode, double newPrice);
     public double getTotal();
-    public void addTransaction(double itemCost);
+    public void addTransaction(int barcode);
+    public void addItem(Item newItem);
 
 }

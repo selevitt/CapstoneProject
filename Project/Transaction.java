@@ -9,7 +9,7 @@
 public class Transaction 
 {
     /** description of instance variable x (add comment for each instance variable) */
-    private int total;
+    private double total;
 
     /**
      * Default constructor for objects of class Transaction
@@ -30,12 +30,12 @@ public class Transaction
      * @param    y    description of parameter y
      * @return    description of the return value
      */
-    public int getTotal()
+    public double getTotal()
     {
         return total;
     }
     
-    public void addTransaction(int itemCost)
+    public void addTransaction(double itemCost)
     {
         total += itemCost;
     }

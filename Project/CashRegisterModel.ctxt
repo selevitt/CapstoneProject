@@ -1,17 +1,13 @@
 #BlueJ class context
 comment0.params=
 comment0.target=CashRegisterModel()
-<<<<<<< HEAD
-numComments=1
-=======
 comment1.params=barcode
 comment1.target=java.lang.String\ getItemName(int)
 comment1.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \ \ \ that\ describes\ the\ operation\ of\ the\ method\r\n\r\n\ @pre\ \ \ \ \ \ \ \ preconditions\ for\ the\ method\r\n\ \ \ \ \ \ \ \ \ \ \ \ (what\ the\ method\ assumes\ about\ the\ method's\ parameters\ and\ class's\ state)\r\n\ @post\ \ \ \ postconditions\ for\ the\ method\r\n\ \ \ \ \ \ \ \ \ \ \ \ (what\ the\ method\ guarantees\ upon\ completion)\r\n\ @param\ \ \ \ y\ \ \ \ description\ of\ parameter\ y\r\n\ @return\ \ \ \ description\ of\ the\ return\ value\r\n
-comment2.params=itemCost
-comment2.target=void\ addTransaction(double)
+comment2.params=barcode
+comment2.target=void\ addTransaction(int)
 comment3.params=
 comment3.target=double\ getTotal()
 comment4.params=barcode\ newPrice
 comment4.target=void\ changePrice(int,\ double)
 numComments=5
->>>>>>> origin/master

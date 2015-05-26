@@ -12,6 +12,7 @@ public class Directory
 {
     /** description of instance variable x (add comment for each instance variable) */
     private ArrayList<Item> directory = new ArrayList<Item>();
+    private int size;
 
     /**
      * Default constructor for objects of class Directory
@@ -32,10 +33,9 @@ public class Directory
      * @param    y    description of parameter y
      * @return    description of the return value
      */
-    public String addItem(Item newItem)
+    public void addItem(Item newItem)
     {
         directory.add(newItem);
-        return "The " + newItem.getItemName() + " was added to the directory.";
     }
     
     public Item getItem(int barcode)
@@ -49,5 +49,11 @@ public class Directory
         }
         return null;
     }
+    
+    public int getSize()
+    {
+        return size;
+    }
+    
 
 }

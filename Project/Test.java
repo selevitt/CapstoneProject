@@ -12,6 +12,6 @@ public class Test
         carrot.changePrice(.75);
         System.out.println(carrot.getPrice());
         Directory purchase = new Directory();
-        System.out.println(purchase.addItem(carrot));
+        purchase.addItem(carrot);
     }
 }

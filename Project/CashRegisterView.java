@@ -21,6 +21,9 @@ public class CashRegisterView
     private JButton b3 = new JButton();
     private JLabel label;
     
+    private JLabel label2;
+    private JLabel label3;
+    
     private JFrame frame = new JFrame();
     
     private CashRegisterModel model;
@@ -32,8 +35,10 @@ public class CashRegisterView
         
         JPanel panel = new JPanel();
         label = new JLabel();
+        label2 = new JLabel();
+        label3 = new JLabel();
         
-        panel.add(label);
+        
         
         frame.add(panel);
         
@@ -52,6 +57,10 @@ public class CashRegisterView
         b3.setVisible(true);
         b3.setText("Change Prices");
         panel.add(b3);
+        
+        panel.add(label);
+        panel.add(label2);
+        panel.add(label3);
         
         frame.setVisible(true);
         
@@ -74,12 +83,34 @@ public class CashRegisterView
         {
             if(event.getSource() == b1)
             {
-                String s = (String)JOptionPane.showInputDialog(
-                    frame,
-                    "Complete the sentence:\n"
-                    + "\"Green eggs and...\"",
-                    "Customized Dialog",
-                    JOptionPane.PLAIN_MESSAGE);
+                boolean done = false;
+                double totalCost = model.getTotal();
+                label.setText("");
+                label2.setText("");
+                label3.setText("$" + totalCost);
+                frame.repaint();
+                    
+                while(done == false)
+                {
+                    String itemBarcode = (String)JOptionPane.showInputDialog(frame,"Enter the next four digit Barcode(Enter 0 when done): ","Checkout",JOptionPane.PLAIN_MESSAGE);
+                    if( itemBarcode.equals("0"))
+                    {
+                        break;
+                    }
+                    int itemBarcodeNum = Integer.valueOf(itemBarcode);
+                    
+                    model.addTransaction(itemBarcodeNum);
+                    
+                    totalCost = model.getTotal();
+                    String itemName = model.getItemName(itemBarcodeNum);
+                    
+                    label.setText(itemBarcode);
+                    label2.setText(itemName);
+                    label3.setText("$" + totalCost);
+                    frame.repaint();
+                    
+                    
+                }
             }
             else if(event.getSource() == b2)
             {
@@ -91,7 +122,8 @@ public class CashRegisterView
                 double priceNum = Double.valueOf(price);
                 
                 Item newItem = new Item(barcodeNum, name, priceNum);
-                model.addItem
+                
+                model.addItem(newItem);
                 
                 
                 label.setText("The Item " + name + " was added with Barcode: " + barcode + " and Price: $ " + price);
