@@ -5,4 +5,6 @@ comment1.params=
 comment1.target=double\ getTotal()
 comment2.params=barcode
 comment2.target=void\ addTransaction(int)
-numComments=3
+comment3.params=newItem
+comment3.target=void\ addItem(Item)
+numComments=4
