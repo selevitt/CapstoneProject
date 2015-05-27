@@ -108,7 +108,7 @@ public class CashRegisterView
             }
             else if(event.getSource() == b2)
             {
-                String barcode = (String)JOptionPane.showInputDialog(frame,"Enter the four digit item barcode:\n","Add Item",JOptionPane.PLAIN_MESSAGE);
+                String barcode = (String)JOptionPane.showInputDialog(frame,"Enter the four digit # item barcode:\n","Add Item",JOptionPane.PLAIN_MESSAGE);
                 String name = (String)JOptionPane.showInputDialog(frame,"Enter the Item Name:\n","Add Item",JOptionPane.PLAIN_MESSAGE);
                 String price = (String)JOptionPane.showInputDialog(frame,"Enter the item price ($):\n","Add Item",JOptionPane.PLAIN_MESSAGE);
                 
