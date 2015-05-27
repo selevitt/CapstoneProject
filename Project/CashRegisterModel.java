@@ -37,7 +37,7 @@ public class CashRegisterModel implements Register
     
     public void addTransaction(int barcode)
     {
-        directory.getItem(barcode).getPrice();
+        total += directory.getItem(barcode).getPrice();
     }
     
     public double getTotal()
@@ -57,6 +57,10 @@ public class CashRegisterModel implements Register
         directory.addItem(newItem);
     }
     
+    public void resetTotal()
+    {
+        total = 0.0;
+    }
 
 
     

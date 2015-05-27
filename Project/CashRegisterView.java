@@ -35,10 +35,6 @@ public class CashRegisterView
         
         JPanel panel = new JPanel();
         label = new JLabel();
-        label2 = new JLabel();
-        label3 = new JLabel();
-        
-        
         
         frame.add(panel);
         
@@ -59,8 +55,6 @@ public class CashRegisterView
         panel.add(b3);
         
         panel.add(label);
-        panel.add(label2);
-        panel.add(label3);
         
         frame.setVisible(true);
         
@@ -84,10 +78,12 @@ public class CashRegisterView
             if(event.getSource() == b1)
             {
                 boolean done = false;
+                
+                model.resetTotal();
                 double totalCost = model.getTotal();
-                label.setText("");
-                label2.setText("");
-                label3.setText("$" + totalCost);
+                
+
+                label.setText("Barcode: " + "\tItem Name: " + "\tTotal: $" + totalCost);
                 frame.repaint();
                     
                 while(done == false)
@@ -103,10 +99,8 @@ public class CashRegisterView
                     
                     totalCost = model.getTotal();
                     String itemName = model.getItemName(itemBarcodeNum);
-                    
-                    label.setText(itemBarcode);
-                    label2.setText(itemName);
-                    label3.setText("$" + totalCost);
+   
+                    label.setText("Barcode: " + itemBarcode + "  Item Name: " + itemName + "  Total: $" + totalCost);
                     frame.repaint();
                     
                     
