@@ -1,18 +1,21 @@
 /**
- * Write a description of class Item here.
+ * The Item class stores information about an item. The Barocde, Name, and price. Also allows for returning these
+ * things as well as changing the price.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Seth) 
+ * @version (5/27/15)
  */
 public class Item
 {
-    /** description of instance variable x (add comment for each instance variable) */
+    /** itemCOde stores the barcode of the item */
     private int itemCode;
+    /** itemName stores the name of the item */
     private String itemName;
+    /** itemPrice stores the price of the item */
     private double itemPrice;
 
     /**
-     * Default constructor for objects of class Item
+     * Takes in the barcode, name, and price of the item when creating the item
      */
     public Item(int barcode, String name, double price)
     {
@@ -22,15 +25,11 @@ public class Item
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
+     * Returns the price of the item
      *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
+     * @pre     price is non-negative
+     * @post    returns price
+     * @return    double
      */
     public double getPrice()
     {
@@ -38,15 +37,10 @@ public class Item
     }
     
     /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
+     * Returns the name of the item
      *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
+     * @post    returns name
+     * @return    String
      */
     public String getItemName()
     {
@@ -54,15 +48,11 @@ public class Item
     }
     
     /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
+     * Returns the price of the item
      *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
+     * @pre     barcode is a 4 digit integer
+     * @post    returns barcode
+     * @return    int
      */
     public int getID()
     {
@@ -70,15 +60,11 @@ public class Item
     }
     
     /**
-     * An example of a method - replace this comment with your own
-     *  that describes the operation of the method
+     * Changes the price of the item by enetering the new one
      *
-     * @pre     preconditions for the method
-     *          (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *          (what the method guarantees upon completion)
-     * @param   y   description of parameter y
-     * @return  description of the return value
+     * @post    price is changed to new price
+     * @param   newPrice (double) the new price of the item
+     * @return  the new Price (double)
      */
     public double changePrice(double newPrice)
     {

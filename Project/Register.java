@@ -2,8 +2,8 @@
 
 /**
  * Interface of a cash register. 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Seth) 
+ * @version (5/27/15)
  */
 public interface Register
 {

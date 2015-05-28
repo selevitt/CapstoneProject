@@ -3,19 +3,18 @@ import java.util.ArrayList;
  
 
 /**
- * Write a description of class Directory here.
+ * A class that stores items in an ArrayList and allows the user to access these items.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Seth) 
+ * @version (5/27/15)
  */
 public class Directory
 {
-    /** description of instance variable x (add comment for each instance variable) */
+    /** The arraylist that stores all the items that are added */
     private ArrayList<Item> directory = new ArrayList<Item>();
-    private int size;
 
     /**
-     * Default constructor for objects of class Directory
+     * Creates a Directory that can be accessed
      */
     public Directory()
     {
@@ -23,21 +22,25 @@ public class Directory
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
+     * Adds a new item to the Directory
      *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
+     * @pre     Item is correctly created
+     * @post    the item is added to the directory
+     * @param    newItem    the new item that needs to be added
      */
     public void addItem(Item newItem)
     {
         directory.add(newItem);
     }
     
+    /**
+     * returns the item that has the matching barcode
+     *
+     * @pre     there is an item with the matching barcode
+     * @post    the item is returned with matching barcode
+     * @param    int barcode the barcode of the item you are looking for.
+     * @return  Item
+     */
     public Item getItem(int barcode)
     {
         for(int i = 0; i < directory.size(); i++)
@@ -48,11 +51,6 @@ public class Directory
             }
         }
         return null;
-    }
-    
-    public int getSize()
-    {
-        return size;
     }
     
 

@@ -1,12 +1,11 @@
 #BlueJ class context
 comment0.params=
 comment0.target=Directory()
-comment0.text=\r\n\ Default\ constructor\ for\ objects\ of\ class\ Directory\r\n
+comment0.text=\r\n\ Creates\ a\ Directory\ that\ can\ be\ accessed\r\n
 comment1.params=newItem
 comment1.target=void\ addItem(Item)
-comment1.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \ \ \ that\ describes\ the\ operation\ of\ the\ method\r\n\r\n\ @pre\ \ \ \ \ \ \ \ preconditions\ for\ the\ method\r\n\ \ \ \ \ \ \ \ \ \ \ \ (what\ the\ method\ assumes\ about\ the\ method's\ parameters\ and\ class's\ state)\r\n\ @post\ \ \ \ postconditions\ for\ the\ method\r\n\ \ \ \ \ \ \ \ \ \ \ \ (what\ the\ method\ guarantees\ upon\ completion)\r\n\ @param\ \ \ \ y\ \ \ \ description\ of\ parameter\ y\r\n\ @return\ \ \ \ description\ of\ the\ return\ value\r\n
+comment1.text=\r\n\ Adds\ a\ new\ item\ to\ the\ Directory\r\n\r\n\ @pre\ \ \ \ \ Item\ is\ correctly\ created\r\n\ @post\ \ \ \ the\ item\ is\ added\ to\ the\ directory\r\n\ @param\ \ \ \ newItem\ \ \ \ the\ new\ item\ that\ needs\ to\ be\ added\r\n
 comment2.params=barcode
 comment2.target=Item\ getItem(int)
-comment3.params=
-comment3.target=int\ getSize()
-numComments=4
+comment2.text=\r\n\ returns\ the\ item\ that\ has\ the\ matching\ barcode\r\n\r\n\ @pre\ \ \ \ \ there\ is\ an\ item\ with\ the\ matching\ barcode\r\n\ @post\ \ \ \ the\ item\ is\ returned\ with\ matching\ barcode\r\n\ @param\ \ \ \ int\ barcode\ the\ barcode\ of\ the\ item\ you\ are\ looking\ for.\r\n\ @return\ \ Item\r\n
+numComments=3

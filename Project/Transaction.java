@@ -1,18 +1,18 @@
 
 
 /**
- * Write a description of class Transaction here.
+ * Stores the total of the transaction and allows for adding a transaction
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Seth) 
+ * @version (5/27/15)
  */
 public class Transaction 
 {
-    /** description of instance variable x (add comment for each instance variable) */
+    /** Total cost of transaction */
     private double total;
 
     /**
-     * Default constructor for objects of class Transaction
+     * Sets total to 0
      */
     public Transaction()
     {
@@ -20,21 +20,23 @@ public class Transaction
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
+     * Returns the total cost at that point
      *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
+     * @pre     total is at least 0
+     * @return    double
      */
     public double getTotal()
     {
         return total;
     }
     
+     /**
+     * Adds more to the total based on the cost of the item
+     * 
+     * @pre     total is at least 0
+     * @post    total will be incremented to the new total
+     * @param   the cost of the new item
+     */
     public void addTransaction(double itemCost)
     {
         total += itemCost;
